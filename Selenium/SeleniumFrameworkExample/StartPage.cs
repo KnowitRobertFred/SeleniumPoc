@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using System.Threading;
+using OpenQA.Selenium;
 
 namespace SeleniumFrameworkExample
 {
@@ -14,6 +15,15 @@ namespace SeleniumFrameworkExample
         public void NavigateTo()
         {
             NavigateToUrl(PageUrl);
+        }
+
+        public MobilePhonesPage OpenMobilePhonesPage()
+        {
+            Click(StartPageLocators.ShopMenuLink);
+            Thread.Sleep(300); // Hårdkodad vänta för menyanimation.
+            Click(StartPageLocators.MobilePhonesLink);
+
+            return new MobilePhonesPage(Driver);
         }
 
         public void AssertIsAtWebPage()

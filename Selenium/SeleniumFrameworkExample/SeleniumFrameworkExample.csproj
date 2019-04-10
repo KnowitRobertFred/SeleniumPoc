@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasePage.cs" />
+    <Compile Include="MobilePhonesPage.cs" />
     <Compile Include="StartPage.cs" />
+    <Compile Include="StartPageLocators.cs" />
     <Compile Include="StartPageTest.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
